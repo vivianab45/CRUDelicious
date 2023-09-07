@@ -1,0 +1,17 @@
+@model Dish
+
+
+    <h1 class="text-center"> @Model.Name</h1>
+    <div class="text-center">
+        <p> @Model.Name by @Model.Chef </p>
+        <p>Description: @Model.Description</p>
+        <p>Calories: @Model.Calories</p>
+        <p>Tastines Level: @Model.Tastiness</p>
+        <div class= "text-center d-flex justify-content-center">
+            <form asp-action="DeleteDish" asp-controller="Dish" method="post" asp-route-dishId="@Model.DishId">
+            <button class="btn btn-danger">Delete</button>
+             </form>
+              @* the edit button is a "get" *@
+             <a asp-action="EditDish" asp-controller="Dish" asp-route-dishId="@Model.DishId" class="btn btn-warning">Edit</a>
+        </div>
+    </div>
