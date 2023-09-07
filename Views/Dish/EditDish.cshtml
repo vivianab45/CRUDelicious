@@ -10,15 +10,21 @@
     asp-route-dishId="@Model.DishId" 
      method="Post" class="row g-3">
         <div class="col-lg-4">
-            <label asp-for="Name"> Name of Dish:</label>
-            <input asp-for="Name" class="form-control">
-            <span asp-validation-for="Name" class="text-danger"></span>
-            <label asp-for="Chef"> Chef's Name:</label>
-            <input asp-for="Chef" class="form-control">
-            <span asp-validation-for="Chef" class="text-danger"></span>
-            <label asp-for="Calories"># of Calories</label>
-            <input asp-for="Calories" class="form-control">
-            <span asp-validation-for="Calories" class="text-danger"></span>
+            <div>
+                <label asp-for="Name"> Name of Dish:</label>
+                <input asp-for="Name" class="form-control">
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div>
+                <label asp-for="Chef"> Chef's Name:</label>
+                <input asp-for="Chef" class="form-control">
+                <span asp-validation-for="Chef" class="text-danger"></span>
+            </div>
+            <div>
+                <label asp-for="Calories"># of Calories</label>
+                <input asp-for="Calories" class="form-control">
+                <span asp-validation-for="Calories" class="text-danger"></span>
+            </div>
         </div>
         <div class="col-lg-4">
             <label asp-for="Tastiness"></label>

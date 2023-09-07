@@ -8,13 +8,13 @@ public class Dish
     public int DishId { get; set; }
     [Required(ErrorMessage="Must inlude Dish Name")]
     public string Name { get; set; } 
-    [Required(ErrorMessage="Must inlude Dish Name")]
+    [Required(ErrorMessage="Must inlude Chef Name")]
     public string Chef { get; set; }
     [Required]
     [Range(1,5)]
     public int Tastiness { get; set; }
-    [Required (ErrorMessage="Calories must be at least 0.")]
-    [Range(0,int.MaxValue)]
+    [Required (ErrorMessage="Calories must be included.")]
+    [Range(0,int.MaxValue, ErrorMessage ="Calories must be at least 0")]
     public int Calories { get; set; }
     [Required]
     public string Description { get; set; }
